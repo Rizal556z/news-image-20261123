@@ -9,6 +9,10 @@ MAKEFUN_OUTPUT_DIR, else ./out).
 
 Pure standard library, no network, no randomness: the same input
 always produces the same output bytes.
+
+It is the repository's only entrypoint: the grader runs it as
+`python3 -P -s /bot/main.py` (Python 3.13), with no network, as an
+unprivileged user.
 """
 
 import hashlib

@@ -1,0 +1,4 @@
+# Local build record (holds claim codes) — never publish.
+submission.md
+# Local test outputs.
+out*/

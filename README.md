@@ -14,6 +14,5 @@ Every story on the poster was checked against live reporting (AP, Reuters, Xinhu
 
 ## How it runs
 
-- `main.ts` (Node 22, no network) is the entrypoint: it checks `entry.png` is a real 1024×1024 PNG of at most 1 MiB, then writes an identical copy to `$MAKEFUN_OUTPUT_DIR/entry.png` (default `out/`).
-- `main.py` (Python 3, standard library only) does the same job independently: it validates the PNG header and dimensions, streams the file in 64 KiB blocks, verifies the SHA-256 of the copy, and sets mode 0644 on the output.
+- `main.py` (Python 3, standard library only) is the sole entrypoint: it validates the PNG header and dimensions, streams the file in 64 KiB blocks, verifies the SHA-256 of the copy, and sets mode 0644 on the output.
 - `draw_poster.py` regenerates `entry.png` deterministically from the story list in this file.
